@@ -19,6 +19,10 @@ for more details.
 #include <QWidget>
 #include <QImageIOPlugin>
 
+#if defined(__APPLE__)
+	#include <GL/glew.h>
+#endif
+
 #include <wrap/system/qgetopt.h>
 
 #include "scene.h"

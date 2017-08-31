@@ -68,11 +68,11 @@ HEADERS  += \
 FORMS    += \
     nxsview.ui
 
-INCLUDEPATH += ../../../vcglib ../common/ ../../../vcglib/eigenlib
+INCLUDEPATH += ../../../vcglib ../common/ ../../../vcglib/eigenlib /usr/local/include
 			  
 win32-msvc2013:  LIBS += -lopengl32 -lGLU32
 win32-msvc2015:  LIBS += -lopengl32 -lGLU32
 
-unix:LIBS += -lGLEW -lGLU -lcurl
+unix:LIBS += -L /usr/local/lib -lGLEW -lcurl
 
 DESTDIR = "../../bin"

@@ -21,7 +21,9 @@ for more details.
 #ifdef GL_ES
 
 #include <OpenGLES/ES2/gl.h>
-
+#elif defined(__APPLE__)
+	#include <OpenGL/glu.h>
+	#include <OpenGL/gl.h>
 #else
 
 #include <GL/glew.h>
